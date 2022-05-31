@@ -1,1 +1,259 @@
+html{
+  scroll-behavior: smooth;
+}
 
+body {
+  margin: 0;
+  background-color: #242423;
+  color: whitesmoke;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #242423;
+    overflow: hidden;
+  }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 6px;
+}
+
+#logo img {
+  margin-right: 10px;
+}
+
+/* Add an active class to highlight the current page */
+/* .topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+} */
+
+.nav-right {
+  float: right;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+.nav-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.main-content {
+  height: 100vh;
+  text-align: center;
+}
+
+.main-content img {
+  margin-top: 6%;
+}
+
+.main-content h1 {
+  font-size: 80px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+}
+
+.main-content h2 {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+#about {
+  background-color: whitesmoke;
+  color: black;
+  z-index: 1;
+  height: 100vh;
+  padding: 5% 10%;
+  text-align: center;
+}
+
+#about hr{
+  margin: 40px 25%;
+}
+
+#blossom {
+  display: block;
+  position: absolute;
+  left: -60px;
+  top: 1200px;
+  transition: 0.8s;
+}
+
+#blossom:hover {
+  transition: 0.8s;
+  transform: rotate(10deg);
+}
+
+ #about-me{
+   font-size: 40px;
+   letter-spacing: 4px;
+ }
+
+ #languages h4, #fun-facts h4, #projects h4{
+   font-size: 30px;
+   margin: 40px;
+   text-transform: uppercase;
+   letter-spacing: 6px;
+   text-align: center;
+ }
+
+ #languages img{
+  margin: 0 10px;
+ }
+
+ #fun-facts p{
+   font-size: 20px;
+ }
+
+ #projects{
+   padding: 5% 10%;
+   z-index: 1;
+   background-color: #fadde1;
+   height: 100vh;
+   color: #242423;
+ }
+
+ #projects hr{
+  margin: 40px 25%;
+ }
+
+ .card img{
+   transition: 0.3s;
+ }
+
+ .card img:hover{
+   transform: scale(1.1);
+   transition: 0.3s;
+ }
+
+ .card h5{
+   font-size: 14px;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   text-align: center;
+ }
+
+ .card p{
+   font-size: 12px;
+ }
+
+ #contact{
+    padding: 15% 25%;
+    z-index: 1;
+    background-color: whitesmoke;
+    height: 100vh;
+    color: #242423;
+    text-align: center;
+ }
+
+ #contact h4{
+   font-size: 40px;
+ }
+
+ #contact hr {
+   margin: 40px 20%;
+ }
+
+ .contact-icons{
+   height: 25px;
+   width: inherit;
+   margin-bottom: 10px;
+   margin-right: 5px;
+ }
+
+ #contact span{
+   margin-right: 10px;
+ }
+
+/* animation inspiration from https://codepen.io/codeconvey/pen/xRzQay */
+
+@keyframes blossom-fall{
+  0%{top:0%}100%{top:100%}
+}
+@keyframes blossom-shake{
+  0%{transform:translateX(0px)}
+  50%{transform:translateX(80px)}
+  100%{transform:translateX(0px)}
+}
+
+.cherry-blossom img{
+  position:fixed;
+  left: 6%;
+  top:0;
+  z-index: -1;
+  animation-name: blossom-fall, blossom-shake;
+  animation-duration:10s,3s;
+  animation-timing-function:linear,ease-in-out;
+  animation-iteration-count:infinite,infinite;
+  animation-play-state:running,running
+}
+
+.cherry-blossom:nth-of-type(0) img{
+  left:1%;
+  animation-delay:0s,0s
+}
+.cherry-blossom:nth-of-type(1) img{
+  left:10%;
+  animation-delay:1s,1s
+}
+.cherry-blossom:nth-of-type(2) img{
+  left:20%;
+  animation-delay:6s,.5s
+}
+.cherry-blossom:nth-of-type(3) img {
+  left:30%;
+  animation-delay:4s,2s
+}
+.cherry-blossom:nth-of-type(4) img{
+  left:70%;
+  animation-delay:2.5s,1s
+}
+.cherry-blossom:nth-of-type(5) img{
+  left:80%;
+  animation-delay:1s,0s
+}
+.cherry-blossom:nth-of-type(6) img{
+    left:90%;
+    animation-delay:3s,1.5s
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .nav-right a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
