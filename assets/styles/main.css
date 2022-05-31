@@ -145,15 +145,15 @@ body {
  }
 
  .card h5{
-   /* font-size: 14px; */
+   font-size: 16px;
    text-transform: uppercase;
    letter-spacing: 4px;
    text-align: center;
  }
 
- /* .card p{
-   font-size: 12px;
- } */
+ .card p{
+   font-size: 14px;
+ }
 
  #contact{
     padding: 15% 25%;
