@@ -258,3 +258,73 @@ body {
     text-align: left;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .main-content{
+    padding-top: 30%;
+    height: 100vh;
+  }
+  .main-content img{
+      height: 300px;
+      margin: 40px 0;
+  }
+  .main-content h1{
+    font-size: 30px;
+  }
+  .main-content h2{
+    font-size: 20px;
+  }
+
+  #about{
+    padding: 40px 10px;
+    height: 100%;
+    width: 100vw;
+  }
+
+  #about-me h4{
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  #about hr{
+    margin-top: 0;
+  }
+
+  #languages h4, #fun-facts h4{
+    font-size: 18px;
+  }
+
+  #languages img{
+    height: 60px;
+    width: inherit;
+  }
+
+  #fun-facts p {
+    font-size: 14px;
+  }
+
+  #blossom{
+    width: 150px;
+    left: -40px;
+    top: 1400px;
+  }
+
+  #projects{
+    height: 100%;
+  }
+
+  #projects h4{
+    font-size: 25px;
+  }
+
+  #contact{
+    padding: 40% 20px;
+  }
+
+  #contact h4{
+    font-size: 30px;
+  }
+
+  #contact h5{
+    font-size: 18px;
+  }
+}
